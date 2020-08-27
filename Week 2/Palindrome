@@ -1,0 +1,14 @@
+function  p = palindrome( string )
+    % base case #1
+    if length(string) < 1
+        p = true;
+        return;
+    end
+    % base case #2
+    if string(1) ~= string(length(string))
+        p =false;
+        return;
+    end
+    % recursive call
+   p = palindrome(string(2:length(string)-1)); palindrome(string(2:length(string)-1));
+end
