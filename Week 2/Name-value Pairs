@@ -1,0 +1,23 @@
+function db=name_value_pairs(varargin)
+if mod(nargin,2)~=0 || nargin==0
+    db={};
+    return;
+end
+for k=1:2:nargin
+    if ~ischar(varargin{k})
+        db={};
+        return;
+    end
+end
+  db=cell(nargin/2,2);
+ for m=1:nargin/2
+     db{m,1}= varargin{2*m-1};
+ end
+ for l=1:nargin/2
+     db{l,2}= varargin{2*l};
+ end
+
+end
+    
+
+    
