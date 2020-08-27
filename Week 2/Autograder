@@ -1,0 +1,7 @@
+function a=grader(x,y,varargin)
+z=zeros(1,nargin-2);
+for k=1:nargin-2
+   z(k)=isequal(x(varargin{k}),y(varargin{k}));
+end
+a=isequal(z,ones(1,length(z)));
+end
